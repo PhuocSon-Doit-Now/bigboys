@@ -1,0 +1,1312 @@
+/* --- TỐI ƯU TOÀN TRANG (NỀN TRẮNG CHỮ ĐEN) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    /* Đổi sang font Inter cao cấp hơn */
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+section {
+    padding: 5rem 9%;
+}
+
+/* Nút bấm */
+.btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1.2rem 3.5rem;
+    background: #000000;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid #000000;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #000000;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.heading span {
+    font-weight: 300;
+    color: #666;
+}
+
+.header .navbar a.nav-bigsize {
+    color: #ff3b30;
+    /* Màu đỏ nổi bật trên nền trắng chữ đen */
+    font-weight: 700;
+    border-bottom: 2px solid #ff3b30;
+    /* Gạch chân tạo điểm nhấn */
+    padding-bottom: 0.5rem;
+}
+
+.header .navbar a.nav-bigsize:hover {
+    color: #000000;
+    border-color: #000000;
+}
+
+/* --- TOPBAR CỐ ĐỊNH --- */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3rem;
+    /* Cố định chiều cao rõ ràng */
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    line-height: 3rem;
+    /* Căn giữa chữ theo chiều dọc */
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    z-index: 1001;
+    /* Đảm bảo nằm trên cùng */
+}
+
+/* --- HEADER CỐ ĐỊNH SÁT TOPBAR --- */
+.header {
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3%;
+    /* Đổi từ 9% xuống 3% để mở rộng không gian cho menu thẳng hàng */
+}
+
+/* Tối ưu Logo Hình ảnh */
+.header .logo a {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+}
+
+.header .logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Thanh Tìm Kiếm Giữa Header phong cách Minhshop */
+.search-box {
+    flex: 0 1 400px;
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 4px;
+    padding: 0.8rem 1.5rem;
+    margin: 0 2rem;
+}
+
+.search-box input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    color: #000000;
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: #666666;
+}
+
+/* Định hình Thanh Navbar điều hướng */
+.header .navbar a {
+    font-size: 1.4rem;
+    color: #000000;
+    margin-left: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.header .navbar a:hover {
+    color: #666666;
+}
+
+.header .icons {
+    display: flex;
+    align-items: center;
+}
+
+.header .icons a,
+.header .icons div {
+    font-size: 2rem;
+    color: #000000;
+    margin-left: 2rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.cart-icon .cart-count {
+    position: absolute;
+    top: -7px;
+    right: -10px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 50%;
+    font-weight: 600;
+}
+
+#menu-btn {
+    display: none;
+}
+
+/* --- HERO SECTION (BANNER) --- */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Thêm dòng này */
+    margin-top: 5rem;
+    padding-left: 10%;
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 60rem;
+    padding: 20px;
+    /* Thêm padding giúp text không chạm mép trên mobile */
+}
+
+.hero-content h3 {
+    font-size: 1.6rem;
+    color: #666;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    color: #000000;
+    margin: 1rem 0;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.swiper-slide.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    /* Dùng padding-left cho container thay vì margin cho slide */
+    padding-left: 10%;
+}
+
+/* Định nghĩa ảnh nền cho từng banner */
+.banner-1 {
+    background-image: url('../images/bannermain.jpg') !important;
+}
+.banner-2 {
+    background-image: url('../images/bannermain2.jpg') !important;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+    .banner-1 {
+        background-image: url('../images/bannermain3.png') !important;
+    }
+    .banner-2 {
+        background-image: url('../images/bannermain4.png') !important;
+    }
+    .hero {
+        padding-left: 5%;
+    }
+}
+
+/* Ẩn nút mũi tên điều hướng của Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    display: none !important;
+}
+
+/* Bigsize */
+.bigsize-banner-text {
+    background: white;
+    width: 100%;
+    padding: 4rem 0 2rem 0;
+    /* Khoảng đệm trên dưới vừa vặn */
+    text-align: center;
+    overflow: hidden;
+}
+
+.bigsize-banner-text h2 {
+    font-size: 14vw;
+    /* Tự co giãn cực đẹp theo mọi màn hình */
+    font-weight: 900;
+    color: #1a1a1a;
+    /* Màu xám đen chìm vào nền theo style tối giản của bạn */
+    letter-spacing: 10px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: 'Arial Black', Impact, sans-serif;
+    margin: 0;
+}
+
+/* Brand */
+.brand-carousel-section {
+    background: #000000;
+    /* Đồng bộ nền đen */
+    padding: 3rem 0 6rem 0;
+    /* Khoảng đệm dưới rộng rãi để đẩy phần Sản Phẩm xuống */
+    width: 100%;
+    overflow: hidden;
+}
+
+.brand-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+/* Đường chạy của các Logo */
+.brand-track {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    /* Khoảng cách rộng rãi giữa các logo */
+    width: max-content;
+    animation: scrollBrands 25s linear infinite;
+    /* Chạy tự động vô tận trong 25 giây */
+}
+
+/* Từng ô chứa logo/chữ thương hiệu */
+.brand-item {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.7);
+    /* Màu chữ text mờ nhẹ */
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Ép ảnh logo chuyển trắng đen */
+.brand-item img {
+    width: 100%;
+    height: auto;
+    max-height: 35px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    /* Chuyển mọi ảnh thành màu trắng */
+    opacity: 0.7;
+}
+
+/* Keyframes tạo hiệu ứng chạy mượt từ phải qua trái */
+@keyframes scrollBrands {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Chạy hết một nửa danh mục tự động reset lặp lại */
+    }
+}
+
+/* --- PRODUCTS SECTION SẠCH SẼ MƯỢT MÀ --- */
+.product-container {
+    display: grid;
+    /* Ép cứng luôn hiển thị đúng 4 cột trên PC và Laptop, 8 sản phẩm sẽ chia đều 4 trên 4 dưới */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    text-align: left;
+    /* Đổi về căn trái chuẩn thương mại điện tử */
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    border-color: #000000;
+}
+
+.badge.badge-bigsize {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.6rem 1.2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+/* Nhãn sản phẩm (Badge) */
+.badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    color: #ffffff;
+}
+
+.badge.sale {
+    background: #ff3b30;
+}
+
+.badge.new {
+    background: #000000;
+}
+
+.product-image {
+    height: 28rem;
+    width: 100%;
+    overflow: hidden;
+    background: #f9f9f9;
+}
+
+.product-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.03);
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h3 {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-info .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.product-info .price-old {
+    font-size: 1.2rem;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.add-to-cart {
+    display: inline-block;
+    /* Giúp thẻ a nhận kích thước width, height, padding chuẩn như button */
+    text-align: center;
+    text-decoration: none;
+    /* Bỏ gạch chân mặc định của link */
+    /* Các thuộc tính màu sắc, padding cũ của bạn giữ nguyên bên dưới... */
+}
+
+.product-info .add-to-cart {
+    width: 100%;
+    padding: 1.1rem;
+    background: transparent;
+    color: #000000;
+    border: 1px solid #000000;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.product-info .add-to-cart:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   CSS CHO PHẦN SNEAKER LOOKBOOK TẠP CHÍ (NỀN ĐEN SANG TRỌNG)
+   ========================================================================== */
+.sneaker-editorial {
+    background: #000000;
+    padding: 8rem 5%;
+    border-top: 1px solid #111111;
+}
+
+.editorial-title {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.editorial-title h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.editorial-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 cột bằng nhau trên PC */
+    gap: 3rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.editorial-card {
+    position: relative;
+    background: #000000;
+    cursor: pointer;
+}
+
+/* Tạo khung viền trắng mỏng nghệ thuật ôm quanh ảnh */
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    /* Độ cao lý tưởng cho phom ảnh dọc trên PC */
+    overflow: hidden;
+    padding: 1.5rem;
+    /* Khoảng cách tạo đường viền */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Khung viền mờ */
+    transition: all 0.4s ease;
+}
+
+.editorial-card:hover .card-image-wrapper {
+    border-color: #ffffff;
+    /* Sáng bừng viền lên khi di chuột vào */
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cắt cúp ảnh khít gọn vào khung */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hiệu ứng zoom nhẹ ảnh bên trong lòng khung khi hover */
+.editorial-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Nút bấm Khám phá thêm phía dưới */
+.editorial-action {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 1.2rem 3.5rem;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* ==========================================================================
+   TÍCH HỢP RESPONSIVE CHO KHỐI EDITORIAL (CHO VÀO ĐOẠN @MEDIA CŨ)
+   ========================================================================== */
+@media (max-width: 991px) {
+    .editorial-container {
+        gap: 2rem;
+    }
+
+    .card-image-wrapper {
+        height: 450px;
+        /* Thu bớt chiều cao trên tablet */
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sneaker-editorial {
+        padding: 6rem 4%;
+    }
+
+    .editorial-title h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Trên mobile ép xếp dọc thành 1 cột duy nhất xem như story Instagram */
+    .editorial-container {
+        grid-template-columns: 1fr !important;
+        gap: 4rem;
+        max-width: 450px;
+        /* Giới hạn độ rộng để ảnh không bị quá bè */
+    }
+
+    .card-image-wrapper {
+        height: 500px;
+    }
+}
+
+/* ==========================================================================
+   CSS CHO PHẦN CAM KẾT DỊCH VỤ (BRAND FEATURES)
+   Cấu hình này đã tích hợp Responsive, copy đè hoàn toàn
+   ========================================================================== */
+.brand-features {
+    background: #000000;
+    /* Đồng bộ nền đen chuẩn e-commerce cao cấp */
+    padding: 6rem 5%;
+    border-top: 1px solid #1a1a1a;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 cột đều nhau trên PC */
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    /* Hiệu ứng nhấc nhẹ khi di chuột */
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #ffffff;
+    /* Icon trắng trên nền đen tối giản */
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    background: #111111;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+    background: #ff3b30;
+    /* Đổi màu icon khi hover cho điểm nhấn */
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.feature-item p {
+    font-size: 1.3rem;
+    color: #999999;
+    /* Chữ xám nhẹ dễ đọc, không chói */
+    line-height: 1.6;
+}
+
+
+/* ==========================================================================
+   HỆ THỐNG RESPONSIVE TÍCH HỢP GỌN GÀNG (PHẢI DÁN DƯỚI CÙNG STYLE.CSS)
+   ========================================================================== */
+@media (max-width: 1200px) {
+
+    /* Gom gọn khoảng trống RIÊNG CHO PHẦN FEATURES trên Laptop vừa và nhỏ */
+    .features-container {
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+}
+
+/* Khi màn hình nhỏ hơn 991px (Máy tính bảng / Laptop nhỏ) */
+@media (max-width: 991px) {
+
+    /* Showcase giảm xuống 4 cột trên Tablet */
+    .showcase-container {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 0.8rem;
+    }
+
+    /* Features gom thành 2 hàng, mỗi hàng 2 ô */
+    .features-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 3rem 2rem;
+    }
+}
+
+/* Khi màn hình nhỏ hơn 576px (Điện thoại dọc) */
+@media (max-width: 576px) {
+
+    .sneaker-showcase,
+    .brand-features {
+        padding: 4rem 4% !important;
+        /* Thu nhỏ khoảng đệm trên dưới */
+    }
+
+    /* Showcase ép thành 2 cột cho điện thoại - Hiển thị 2-1 y hệt Minhshop */
+    .showcase-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem;
+        /* Thu nhỏ khoảng cách giữa các ảnh cho khít */
+    }
+
+    /* Features ép thành 1 hàng dọc duy nhất thẳng tắp */
+    .features-container {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+
+    .feature-item {
+        padding: 1rem 0 !important;
+    }
+
+    .feature-icon {
+        width: 5.5rem;
+        height: 5.5rem;
+        line-height: 5.5rem;
+        font-size: 2.5rem;
+        /* Icon nhỏ lại một chút cho vừa mắt */
+    }
+
+    .feature-item h3 {
+        font-size: 1.4rem;
+        /* Chữ tiêu đề gọn lại */
+    }
+}
+
+/* ==========================================================================
+   CSS CHO PHẦN CAM KẾT DỊCH VỤ (BRAND FEATURES)
+   ========================================================================== */
+.brand-features {
+    background: #fdfdfd;
+    /* Màu nền xám cực nhẹ để tách biệt với phần sản phẩm */
+    padding: 6rem 5%;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.features-container {
+    display: grid;
+    /* Chia làm 4 cột đều nhau trên giao diện máy tính */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    /* Hiệu ứng nhấc lên nhẹ khi di chuột */
+}
+
+/* Định dạng Icon */
+.feature-icon {
+    font-size: 3rem;
+    color: #000000;
+    /* Icon đen tối giản */
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    background: #f5f5f5;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+    background: #000000;
+    color: #ffffff;
+    /* Đổi màu icon khi hover */
+}
+
+/* Tiêu đề tính năng */
+.feature-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Nội dung mô tả ngắn */
+.feature-item p {
+    font-size: 1.3rem;
+    color: #666666;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   HỖ TRỢ RESPONSIVE CHO PHẦN FEATURES (TÍNH HỢP VÀO ĐOẠN MEDIA CŨ)
+   ========================================================================== */
+@media (max-width: 991px) {
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* Màn hình vừa chia làm 2 hàng 2 cột */
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .brand-features {
+        padding: 4rem 4%;
+    }
+
+    .features-container {
+        grid-template-columns: 1fr;
+        /* Điện thoại xếp thành 1 hàng dọc gọn gàng */
+        gap: 1.5rem;
+    }
+
+    .feature-item {
+        padding: 1rem 0;
+    }
+}
+
+/* ==========================================================================
+   CẤU HÌNH KHỐI FOOTER HIỆN ĐẠI (ĐỒNG BỘ ĐEN TRẮNG) - DÙNG CHUNG CHO PC
+   ========================================================================== */
+.footer {
+    background: #000000;
+    /* Nền đen tuyền sang trọng giống Topbar */
+    color: #ffffff;
+    padding: 6rem 5% 2rem 5%;
+    border-top: 1px solid #1a1a1a;
+    font-family: sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    /* Tự động chia cột thông minh: Tối thiểu 280px một cột, tự co giãn khít màn hình PC */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* Tiêu đề từng cột */
+.footer-box h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2.5rem;
+    color: #ffffff;
+    position: relative;
+}
+
+/* Thanh gạch chân trang trí ngắn tinh tế dưới tiêu đề */
+.footer-box h3::after {
+    content: '';
+    position: absolute;
+    bottom: -0.8rem;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #ff3b30;
+    /* Điểm xuyết màu đỏ thương hiệu trùng với nút BigSize */
+}
+
+/* Nội dung cột giới thiệu */
+.footer-desc {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #aaaaaa;
+    /* Màu chữ xám nhẹ dễ đọc, không bị chói */
+    margin-bottom: 2rem;
+}
+
+/* Các icon mạng xã hội */
+.footer-socials a {
+    display: inline-block;
+    width: 3.6rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    background: #111111;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background: #ffffff;
+    color: #000000;
+    transform: translateY(-3px);
+}
+
+/* Định dạng danh sách link và thông tin */
+.footer-links,
+.footer-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li,
+.footer-info li {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #aaaaaa;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.6;
+}
+
+/* Icon trong cột thông tin */
+.footer-info li i {
+    color: #ffffff;
+    margin-right: 1.2rem;
+    font-size: 1.6rem;
+    margin-top: 0.3rem;
+    width: 15px;
+    text-align: center;
+}
+
+/* Hiệu ứng hover cho các đường link */
+.footer-links li a {
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+    /* Nhích nhẹ sang phải khi di chuột vào */
+}
+
+/* Dòng Copyright dưới cùng */
+.footer-bottom {
+    text-align: center;
+    padding-top: 2.5rem;
+    font-size: 1.4rem;
+    border-top: 1px solid #111111;
+}
+
+.footer-bottom p {
+    font-size: 1.2rem;
+    color: #555555;
+}
+
+
+.floating-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.btn-contact {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.btn-contact:hover {
+    transform: scale(1.1);
+}
+
+/* Màu sắc từng nút */
+.phone {
+    background-color: #28a745;
+}
+
+/* Xanh lá cho điện thoại */
+.zalo {
+    background-color: #0068ff;
+}
+
+/* Xanh dương cho Zalo */
+.messenger {
+    background-color: #0084ff;
+}
+
+/* Màu messenger */
+/* ==========================================================================
+   1. CẤU HÌNH CHO MÀN HÌNH MÁY TÍNH LỚN HẲN (TRÊN 1300PX)
+   ========================================================================== */
+@media (min-width: 1301px) {
+    .header {
+        padding: 1.5rem 4% !important;
+        /* Đệm trái phải vừa vặn tinh tế */
+    }
+
+    .search-box {
+        flex: 0 1 400px;
+        /* Trả về độ rộng 400px phong cách Minhshop */
+        margin: 0 2rem;
+    }
+
+    .header .navbar a {
+        font-size: 1.4rem;
+        margin-left: 2rem;
+    }
+
+    #menu-btn {
+        display: none !important;
+        /* Ẩn nút Hamburger trên màn hình lớn hẳn */
+    }
+}
+
+
+/* ==========================================================================
+   2. ÉP TẤT CẢ MÀN HÌNH TỪ 1300PX TRỞ XUỐNG DÙNG CHUẨN MOBILE (FIX TRIỆT ĐỂ)
+   ========================================================================== */
+@media (max-width: 1300px) {
+
+    /* --- HỆ THỐNG HEADER MOBILE & LAPTOP NHỎ --- */
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        border-top: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+        display: none;
+        /* Mặc định ẩn menu chữ ngang */
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+    }
+
+    /* Khi người dùng bấm nút ba gạch, thêm class .active bằng JS để xổ menu dọc */
+    .header .navbar.active {
+        display: flex !important;
+    }
+
+    .header .navbar a {
+        margin: 1.5rem 5% !important;
+        font-size: 1.6rem !important;
+    }
+
+    #menu-btn {
+        display: inline-block !important;
+        /* Hiện nút Hamburger ngay lập tức */
+    }
+
+    .search-box {
+        flex: 1 !important;
+        /* Tự động giãn ra chiếm không gian trung tâm */
+        max-width: 450px;
+        margin: 0 1.5rem !important;
+    }
+
+    /* .hide-mobile {
+        display: none !important;
+    } */
+}
+
+
+/* ==========================================================================
+   3. TỐI ƯU RIÊNG CHO MÀN HÌNH TABLET VÀ ĐIỆN THOẠI (DƯỚI 768PX)
+   ========================================================================== */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    .floating-contact {
+        bottom: 10px;
+        /* Đẩy lên cao hơn một chút */
+        right: 10px;
+        gap: 10px;
+        /* Giảm khoảng cách giữa các nút */
+    }
+
+    .btn-contact {
+        width: 40px;
+        /* Thu nhỏ kích thước nút */
+        height: 40px;
+        font-size: 16px;
+        /* Giảm size icon */
+    }
+
+    .topbar {
+        display: none !important;
+        /* Ẩn topbar để tiết kiệm không gian */
+    }
+
+    .header {
+        top: 0 !important;
+        /* Đẩy header sát lên mép trên cùng */
+        padding: 1.5rem 4%;
+    }
+
+    section {
+        padding: 4rem 4%;
+    }
+
+    .hero {
+        min-height: 55vh !important;
+        /* Giảm chiều cao xuống để ảnh không bị dãn dọc dài ngoằng */
+        background-position: center 30% !important;
+        /* Nhích tâm ảnh lên một chút để thấy rõ đôi giày */
+        margin-top: 4.5rem;
+        /* Cân đối lại khoảng cách với header mới */
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 0 2rem;
+        /* Thêm khoảng đệm 2 bên cho chữ không chạm viền */
+    }
+
+    /* Cấu hình lại Footer thành 1 hàng dọc khi xem trên máy tính bảng/điện thoại */
+    .footer-container {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+    }
+
+    /* Hiển thị sản phẩm 2 cột chuẩn responsive */
+    .product-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    /* Cấu hình Brand section cho màn hình tầm trung */
+    .bigsize-banner-text h2 {
+        font-size: 18vw !important;
+        letter-spacing: 5px !important;
+    }
+
+    .brand-carousel-section {
+        padding: 2rem 0 4rem 0 !important;
+    }
+
+    .brand-track {
+        gap: 4rem !important;
+    }
+
+    .brand-item {
+        width: 90px !important;
+        font-size: 1.4rem !important;
+    }
+
+    .brand-item img {
+        max-height: 25px !important;
+    }
+
+    .swiper-slide.hero {
+        padding-left: 5%;
+        /* Khoảng cách lề nhỏ hơn trên mobile */
+        text-align: left;
+        /* Đảm bảo luôn nằm bên trái nhưng có padding */
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+        /* Thu nhỏ tiêu đề trên mobile để không bị vỡ chữ */
+    }
+
+    .hero-mobile {
+        display: none !important;
+    }
+
+    @media (max-width: 768px) {
+
+        /* Trên điện thoại: ẩn desktop, hiện mobile */
+        .hero-desktop {
+            display: none !important;
+        }
+
+        .hero-mobile {
+            display: flex !important;
+        }
+    }
+}
+
+
+/* ==========================================================================
+   4. ĐẶC TRỊ CHO ĐIỆN THOẠI DỌC SIÊU NHỎ (DƯỚI 480PX)
+   ========================================================================== */
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    /* Ẩn thanh tìm kiếm dài trên mobile dọc để không bị đè icon */
+    .search-box {
+        display: none !important;
+    }
+
+    .hero {
+        min-height: 45vh !important;
+        /* Điện thoại nhỏ thì banner ngắn lại dạng hình chữ nhật nằm ngang sẽ đẹp hơn */
+        background-position: center 25% !important;
+        /* Đẩy đôi giày xuống đúng tầm mắt */
+        align-items: flex-end;
+        /* Đẩy khối chữ xuống góc dưới */
+        padding-bottom: 3rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem !important;
+        /* Hạ cỡ chữ tiêu đề xuống chống vỡ dòng */
+    }
+
+    .hero-content p {
+        font-size: 1.3rem !important;
+    }
+
+    /* Chữ BIGSIZE khít đẹp vừa màn hình */
+    .bigsize-banner-text {
+        padding: 3rem 0 1rem 0 !important;
+    }
+
+    .bigsize-banner-text h2 {
+        font-size: 16vw !important;
+        letter-spacing: 4px !important;
+    }
+
+    .brand-carousel-section {
+        padding: 1.5rem 0 4rem 0 !important;
+    }
+
+    /* Kích hoạt vuốt ngang bằng tay mượt mà */
+    .brand-slider {
+        overflow-x: auto !important;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 2rem !important;
+        display: flex !important;
+    }
+
+    .brand-slider::-webkit-scrollbar {
+        display: none !important;
+        /* Ẩn scrollbar */
+    }
+
+    .brand-slider {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .brand-track {
+        animation: none !important;
+        /* Tắt chuyển động tự động chống lag */
+        gap: 3.5rem !important;
+        width: max-content !important;
+        display: flex !important;
+    }
+
+    .brand-item {
+        width: 85px !important;
+        font-size: 1.3rem !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    .brand-item img {
+        max-height: 22px !important;
+        width: auto !important;
+    }
+
+    /* Tối ưu khoảng đệm Footer trên điện thoại nhỏ gọn gàng hơn */
+    .footer {
+        padding: 4rem 6% 2rem 6% !important;
+    }
+
+}

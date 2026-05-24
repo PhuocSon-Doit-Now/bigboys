@@ -1,0 +1,83 @@
+/* admin-auth.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #000000;
+    /* Màu đen đặc trưng cho Admin */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-login-wrapper {
+    width: 100%;
+    padding: 20px;
+}
+
+.admin-login-box {
+    background: #ffffff;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.admin-logo h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.admin-logo span {
+    font-weight: 300;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #000;
+    font-size: 1rem;
+}
+
+.btn-admin-login {
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-admin-login:hover {
+    background: #333;
+}
+
+.admin-footer-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #666;
+}

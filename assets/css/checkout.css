@@ -1,0 +1,45 @@
+.checkout-container {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 50px;
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.checkout-left h2, .checkout-right h3 { font-size: 2.2rem; margin-bottom: 2rem; }
+
+.input-group { margin-bottom: 15px; }
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.5rem;
+}
+
+.payment-methods { display: flex; flex-direction: column; gap: 15px; margin-bottom: 2rem; }
+.payment-option { font-size: 1.6rem; cursor: pointer; display: flex; align-items: center; gap: 10px; }
+
+.place-order-btn {
+    width: 100%;
+    padding: 18px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Cột phải */
+.checkout-right { background: #f9f9f9; padding: 30px; border-radius: 15px; height: fit-content; }
+.order-item { display: flex; justify-content: space-between; font-size: 1.5rem; margin-bottom: 15px; color: #555; }
+.order-total { display: flex; justify-content: space-between; font-size: 1.8rem; font-weight: bold; border-top: 2px solid #ddd; padding-top: 15px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .checkout-container { grid-template-columns: 1fr; }
+    .checkout-right { order: -1; } /* Đưa tóm tắt lên trên trên mobile */
+}

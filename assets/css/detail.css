@@ -1,0 +1,613 @@
+/* ==========================================================================
+   CSS CHO BREADCRUMB (ĐƯỜNG DẪN LIÊN KẾT) - ĐÃ CĂN THẲNG HÀNG & ĐỔI DẤU CHẤM
+   ========================================================================== */
+.breadcrumb-container {
+    padding: 2rem 5%;
+    background: #fdfdfd;
+    margin-top: 11rem;
+    /* Đã tăng từ 8rem lên 11rem để chống dính hoàn toàn dưới thanh Header fixed */
+    border-bottom: 1px solid #eeeeee;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* ÉP TẤT CẢ CÁC PHẦN TỬ THẲNG HÀNG NẰM TRÊN MỘT ĐƯỜNG THẲNG */
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+}
+
+.breadcrumb li {
+    color: #888888;
+    display: inline-flex;
+    /* Giúp căn chỉnh mượt hơn */
+    align-items: center;
+}
+
+.breadcrumb li a {
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb li a:hover {
+    color: #000000;
+}
+
+/* Đổi từ dấu gạch chéo sang dấu chấm tròn (•) tinh tế */
+.breadcrumb li+li:before {
+    padding: 0 1.2rem;
+    color: #aaaaaa;
+    content: "•";
+    /* Sử dụng ký tự dấu chấm tròn */
+    font-size: 1.4rem;
+    vertical-align: middle;
+}
+
+.breadcrumb li.active {
+    color: #000000;
+    font-weight: 500;
+}
+
+/* Khối thiết kế đặc biệt cho chữ BIGBOYS */
+.breadcrumb li a.breadcrumb-brand {
+    font-weight: 800;
+    /* Siêu đậm tạo sự khác biệt */
+    font-size: 1.1rem;
+    /* Hạ nhẹ size để cân xứng tuyệt đối với chữ bên cạnh */
+    letter-spacing: 1px;
+    /* Giãn cách ký tự sang chảnh */
+    color: #ffffff !important;
+    /* Chữ màu trắng */
+    background: #000000;
+    /* Nền đen */
+    padding: 0.3rem 0.8rem;
+    /* Khoảng cách đệm */
+    border-radius: 3px;
+    /* Bo góc nhẹ */
+    display: inline-flex;
+    /* Thay đổi sang inline-flex để dễ căn text */
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    /* Cố định chiều cao khối */
+    line-height: 1;
+    /* Không cho line-height làm lệch chữ */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hiệu ứng khi rê chuột vào (Hover) */
+.breadcrumb li a.breadcrumb-brand:hover {
+    background: gray;
+    box-shadow: 0 4px 8px rgba(41, 41, 41, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Xóa bỏ các tùy chỉnh căn cũ không còn cần thiết */
+.breadcrumb li:has(a.breadcrumb-brand)+li:before {
+    line-height: inherit;
+    align-self: center;
+}
+
+/* Tối ưu mượt mà trên Mobile (Nếu chữ quá dài sẽ tự trượt ngang thay vì rớt dòng) */
+@media (max-width: 480px) {
+    .breadcrumb-container {
+        margin-top: 7.5rem;
+        padding: 1.2rem 4%;
+    }
+
+    .breadcrumb {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 0.2rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .breadcrumb::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   CSS CHO CHI TIẾT SẢN PHẨM (PRODUCT DETAIL MAIN LAYOUT)
+   ========================================================================== */
+.product-detail-section {
+    /* Đổi từ: padding: 4rem 5% 8rem 5%; thành giá trị dưới đây */
+    padding: 4rem 5% 1.5rem 5%;
+    /* Giảm padding-bottom xuống 1.5rem để kéo Sản phẩm liên quan lên sát hơn */
+    background: #ffffff;
+}
+
+.product-detail-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    /* Tỷ lệ vàng ảnh lớn thông tin gọn */
+    gap: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Giao diện bộ ảnh bên trái */
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    /* Đảm bảo gallery luôn chiếm 100% cột grid */
+    min-width: 0;
+    /* Quan trọng: Ngăn chặn lỗi dàn trang của flexbox */
+}
+
+.main-image {
+    width: 100%;
+    height: 550px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 1. Container bao ngoài */
+/* Đảm bảo container ảnh nhỏ không bị co cụm */
+/* Container bao ngoài các ảnh nhỏ */
+/* Container bao ngoài để tạo không gian cuộn */
+.thumbnail-list {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Bắt buộc không xuống dòng */
+    overflow-x: auto;
+    /* Kích hoạt cuộn ngang */
+    gap: 1rem;
+    padding-bottom: 10px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    /* Mượt mà trên mobile */
+    scrollbar-width: thin;
+    /* Firefox */
+}
+
+/* Ép cứng các thumbnail */
+.thumb-item {
+    flex: 0 0 90px;
+    /* Luôn giữ kích thước 90px, không co giãn */
+    width: 90px;
+    height: 90px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background: #f9f9f9;
+    transition: all 0.2s ease;
+}
+
+/* 4. Ảnh bên trong */
+/* Fix lỗi hiển thị trên trình duyệt Desktop */
+.thumb-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Tránh khoảng hở thừa dưới ảnh */
+}
+
+.thumb-item.active,
+.thumb-item:hover {
+    border-color: #000000;
+}
+
+/* 3. Style thanh cuộn (Không đặt flex vào đây) */
+.thumbnail-list::-webkit-scrollbar {
+    height: 6px;
+}
+
+.thumbnail-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.thumbnail-list::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Giao diện khối thông số bên phải */
+.product-info-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-badge {
+    align-self: flex-start;
+    background: #000000;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.5rem 1.2rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+}
+
+.product-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+}
+
+.product-sku {
+    font-size: 1.3rem;
+    color: #666666;
+    margin-bottom: 2.5rem;
+}
+
+/* Giá tiền */
+.product-price-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 2.5rem;
+}
+
+.price-current {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #ff3b30;
+    /* Đỏ cá tính */
+}
+
+.price-old {
+    font-size: 1.6rem;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.price-discount {
+    background: rgba(255, 59, 48, 0.1);
+    color: #ff3b30;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 3px;
+}
+
+.product-short-desc {
+    font-size: 1.4rem;
+    color: #444444;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+}
+
+/* Khối Chọn Size */
+.product-option-group {
+    margin-bottom: 3rem;
+}
+
+.option-title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.option-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+/* Style cho nhóm chọn màu */
+.color-text-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.color-text-chip {
+    padding: 0 15px;
+    /* Để chiều ngang tự co giãn theo chữ */
+    height: 45px;
+    border: 1px solid #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    min-width: 80px;
+    /* Độ rộng tối thiểu để nhìn sang trọng */
+}
+
+.color-text-chip.active {
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.size-guide-link {
+    font-size: 1.3rem;
+    color: #666666;
+    text-decoration: none;
+}
+
+.size-guide-link:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.size-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.size-chip {
+    min-width: 50px;
+    height: 45px;
+    border: 1px solid #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+}
+
+.size-chip:hover:not(.disabled) {
+    border-color: #000000;
+}
+
+.size-chip.active {
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.size-chip.disabled {
+    background: #f5f5f5;
+    color: #cccccc;
+    border-color: #eeeeee;
+    cursor: not-allowed;
+}
+
+/* Nút tương tác số lượng & Đặt hàng */
+.product-purchase-control {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.quantity-selector {
+    display: flex;
+    border: 1px solid #dddddd;
+    height: 50px;
+    align-items: center;
+    background: #ffffff;
+}
+
+.quantity-selector button {
+    width: 45px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #555555;
+    transition: background 0.2s;
+}
+
+.quantity-selector button:hover {
+    background: #f5f5f5;
+}
+
+/* Triệt tiêu hoàn toàn dấu mũi tên tăng giảm nhỏ của hệ thống trên ô nhập */
+.quantity-selector input::-webkit-outer-spin-button,
+.quantity-selector input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity-selector input {
+    -moz-appearance: textfield;
+    /* Cho Firefox */
+    width: 45px;
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    background: transparent;
+}
+
+.btn-add-to-cart {
+    flex: 1;
+    height: 50px;
+    line-height: 48px;
+    /* Giúp chữ nằm chính giữa tim nút bấm */
+    border: 1px solid #000000;
+    background: transparent;
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-add-to-cart:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+.btn-buy-now {
+    width: 100%;
+    height: 50px;
+    background: #ff3b30;
+    color: #ffffff;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    margin-bottom: 3rem;
+    transition: background 0.2s;
+}
+
+.btn-buy-now:hover {
+    background: #e03228;
+}
+
+/* Nhãn tín nhiệm dưới cùng */
+.info-trust-badges {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    border-top: 1px solid #eeeeee;
+    gap: 1rem;
+}
+
+.badge-item {
+    font-size: 1.2rem;
+    color: #666666;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.badge-item i {
+    color: #000000;
+    font-size: 1.4rem;
+}
+
+/* ==========================================================================
+   TÍCH HỢP RESPONSIVE CHI TIẾT SẢN PHẨM PHÙ HỢP CÁC LỚP MEDIA ĐÃ CÓ CỦA BẠN
+   ========================================================================== */
+@media (max-width: 991px) {
+    .product-detail-container {
+        grid-template-columns: 1fr;
+        /* Ép thành một cột dọc trên máy tính bảng */
+        gap: 4rem;
+    }
+
+    .main-image {
+        height: 480px;
+    }
+}
+
+/* ==========================================================================
+   TỐI ƯU RESPONSIVE CHI TIẾT SẢN PHẨM
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .breadcrumb-container {
+        margin-top: 8.5rem;
+        padding: 1.5rem 4%;
+    }
+
+    .product-detail-section {
+        padding: 3rem 4% 1.5rem 4%;
+        /* Căn chỉnh khoảng cách hợp lý */
+    }
+
+    .product-title {
+        font-size: 2.4rem;
+    }
+
+    .info-trust-badges {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Thu nhỏ thumbnail trên Tablet */
+    .thumb-item {
+        flex: 0 0 60px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .thumbnail-list {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb-container {
+        margin-top: 7.5rem;
+        padding: 1.2rem 4%;
+    }
+
+    /* 1. Giảm chiều cao ảnh chính */
+    .main-image {
+        height: 350px !important;
+    }
+
+    .product-detail-section {
+        padding: 2rem 4% 1.5rem 4% !important;
+    }
+
+    .product-title {
+        font-size: 2.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* 2. CẤU HÌNH LẠI CỤM NÚT BẤM - NẰM CÙNG 1 HÀNG */
+    .product-purchase-control {
+        display: flex !important;
+        flex-direction: row !important; /* Ép nằm ngang */
+        gap: 10px !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .quantity-selector {
+        width: 100px !important; /* Độ rộng cố định vừa phải */
+        flex-shrink: 0;
+        height: 45px;
+    }
+
+    .btn-add-to-cart {
+        flex: 1 !important; /* Chiếm hết khoảng trống còn lại */
+        height: 45px !important;
+        line-height: 43px !important;
+        font-size: 1.2rem !important;
+        padding: 0 5px !important;
+        white-space: nowrap; /* Giữ chữ trên 1 dòng */
+    }
+
+    /* 3. Nút mua ngay cố định */
+    .btn-buy-now {
+        height: 45px !important;
+        line-height: 43px !important;
+        font-size: 1.3rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .thumb-item {
+        flex: 0 0 55px;
+        width: 55px;
+        height: 55px;
+    }
+}

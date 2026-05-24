@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Trị Hệ Thống | BIGBOYS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>BIGBOYS <span>ADMIN</span></h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active"><i class="fas fa-home"></i> Tổng quan</a>
+                <a href="#" class="nav-item"><i class="fas fa-shopping-cart"></i> Đơn hàng</a>
+                <a href="#" class="nav-item"><i class="fas fa-shoe-prints"></i> Sản phẩm</a>
+                <a href="#" class="nav-item"><i class="fas fa-users"></i> Khách hàng</a>
+                <a href="#" class="nav-item"><i class="fas fa-chart-line"></i> Báo cáo</a>
+                <div class="nav-divider"></div>
+                <a href="#" class="nav-item logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-title">
+                    <h1>Bảng điều khiển</h1>
+                </div>
+                <div class="header-user">
+                    <span>Xin chào, <strong>Quản trị viên</strong></span>
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=000&color=fff" alt="Avatar">
+                </div>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <p>Doanh thu tháng</p>
+                        <h3>125,000,000₫</h3>
+                    </div>
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <p>Đơn hàng mới</p>
+                        <h3>48</h3>
+                    </div>
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="stat-card warning">
+                    <div class="stat-info">
+                        <p>Sản phẩm sắp hết</p>
+                        <h3>12</h3>
+                    </div>
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+            </section>
+
+            <section class="content-box">
+                <div class="box-header">
+                    <h2>Đơn hàng gần đây</h2>
+                    <a href="#" class="btn-view-all">Xem tất cả</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Mã đơn hàng</th>
+                                <th>Khách hàng</th>
+                                <th>Ngày đặt</th>
+                                <th>Trạng thái</th>
+                                <th>Tổng tiền</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="order-id-badge">#BB-2026-991</span></td>
+                                <td>Nguyễn Văn An</td>
+                                <td>24/05/2026</td>
+                                <td><span class="status pending">Chờ xử lý</span></td>
+                                <td>1,250,000₫</td>
+                                <td>
+                                    <button class="btn-action"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="order-id-badge">#BB-2026-992</span></td>
+                                <td>Trần Thị Bình</td>
+                                <td>23/05/2026</td>
+                                <td><span class="status shipping">Đang giao</span></td>
+                                <td>2,100,000₫</td>
+                                <td>
+                                    <button class="btn-action"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất Cả Sản Phẩm - BIGBOYS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+    <link rel="stylesheet" href="assets/css/detail.css">
+</head>
+
+<body>
+    <div class="topbar">
+        <p>BẠN CẦN GIÀY BIG SIZE? / BẠN LIÊN HỆ BIGBOYS </p>
+    </div>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.jpg" alt="Bigboys Logo">
+            </a>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Tìm sản phẩm, thương hiệu mong muốn...">
+            <button class="fas fa-search"></button>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">Trang Chủ</a>
+            <a href="bigsize.html" class="nav-link nav-bigsize"><i class="fas fa-star"></i> GIÀY BIG SIZE
+                (44-49)</a>
+            <a href="product.html" class="nav-link">Sản Phẩm Khác</a>
+            <a href="about.html" class="nav-link">Về Chúng Tôi</a>
+            <a href="#contact" class="nav-link">Liên Hệ</a>
+        </nav>
+
+        <div class="icons">
+            <a href="cart.html" class="fas fa-shopping-cart cart-icon"><span class="cart-count">0</span></a>
+            <a href="login.html" class="fas fa-user hide-mobile"></a>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-container">
+        <ul class="breadcrumb">
+            <li><a href="index.html" class="breadcrumb-brand">BIGBOYS</a></li>
+            <li class="active">Tất cả sản phẩm</li>
+        </ul>
+    </div>
+
+    <main class="shop-section">
+        <div class="shop-container">
+
+            <aside class="filter-sidebar">
+                <h2 class="sidebar-title">Bộ lọc sản phẩm</h2>
+
+                <div class="accordion-item active">
+                    <button class="accordion-header">
+                        <span>Thương hiệu</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="brand" value="adidas"> Adidas
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="brand" value="nike"> Nike
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="brand" value="vans"> Vans
+                        </label>
+                    </div>
+                </div>
+
+                <div class="accordion-item active">
+                    <button class="accordion-header">
+                        <span>Kích cỡ (Big Size)</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="size-grid-filter">
+                            <label class="size-box-item"><input type="checkbox" value="44"><span>44</span></label>
+                            <label class="size-box-item"><input type="checkbox" value="45"><span>45</span></label>
+                            <label class="size-box-item"><input type="checkbox" value="46"><span>46</span></label>
+                            <label class="size-box-item"><input type="checkbox" value="47"><span>47</span></label>
+                            <label class="size-box-item"><input type="checkbox" value="48"><span>48</span></label>
+                            <label class="size-box-item"><input type="checkbox" value="49"><span>49</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Khoảng giá</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <label class="filter-checkbox">
+                            <input type="radio" name="price" value="under-1m"> Dưới 1.000.000đ
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="radio" name="price" value="1m-2m"> 1.000.000đ - 2.000.000đ
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="radio" name="price" value="over-2m"> Trên 2.000.000đ
+                        </label>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="products-display-area">
+                <section class="products" id="products">
+                    <h2 class="heading">Sản Phẩm <span>Nổi Bật</span></h2>
+
+                    <div class="product-container">
+                        <div class="product-card">
+                            <span class="badge sale">-15%</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Vans Retro">
+                            </div>
+                            <div class="product-info">
+                                <h3>Retro Canvas Casual</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">1.200.000đ</span>
+                                    <span class="price-old">1.410.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Sneaker">
+                            </div>
+                            <div class="product-info">
+                                <h3>Nike Air Max Big Size</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">1.850.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Sneaker Trắng">
+                            </div>
+                            <div class="product-info">
+                                <h3>Minimalist White Style</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">2.100.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Cao Cổ">
+                            </div>
+                            <div class="product-info">
+                                <h3>Urban Streetwear High</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">2.450.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="badge sale">-15%</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Vans Retro">
+                            </div>
+                            <div class="product-info">
+                                <h3>Retro Canvas Casual</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">1.200.000đ</span>
+                                    <span class="price-old">1.410.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Sneaker">
+                            </div>
+                            <div class="product-info">
+                                <h3>Nike Air Max Big Size</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">1.850.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Sneaker Trắng">
+                            </div>
+                            <div class="product-info">
+                                <h3>Minimalist White Style</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">2.100.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Cao Cổ">
+                            </div>
+                            <div class="product-info">
+                                <h3>Urban Streetwear High</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">2.450.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="badge sale">-15%</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Vans Retro">
+                            </div>
+                            <div class="product-info">
+                                <h3>Retro Canvas Casual</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">1.200.000đ</span>
+                                    <span class="price-old">1.410.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Sneaker">
+                            </div>
+                            <div class="product-info">
+                                <h3>Nike Air Max Big Size</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">1.850.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Sneaker Trắng">
+                            </div>
+                            <div class="product-info">
+                                <h3>Minimalist White Style</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">2.100.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Cao Cổ">
+                            </div>
+                            <div class="product-info">
+                                <h3>Urban Streetwear High</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">2.450.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="badge sale">-15%</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Vans Retro">
+                            </div>
+                            <div class="product-info">
+                                <h3>Retro Canvas Casual</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">1.200.000đ</span>
+                                    <span class="price-old">1.410.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Sneaker">
+                            </div>
+                            <div class="product-info">
+                                <h3>Nike Air Max Big Size</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">1.850.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Sneaker Trắng">
+                            </div>
+                            <div class="product-info">
+                                <h3>Minimalist White Style</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">2.100.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Cao Cổ">
+                            </div>
+                            <div class="product-info">
+                                <h3>Urban Streetwear High</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">2.450.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="badge sale">-15%</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Vans Retro">
+                            </div>
+                            <div class="product-info">
+                                <h3>Retro Canvas Casual</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">1.200.000đ</span>
+                                    <span class="price-old">1.410.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Sneaker">
+                            </div>
+                            <div class="product-info">
+                                <h3>Nike Air Max Big Size</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">1.850.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Sneaker Trắng">
+                            </div>
+                            <div class="product-info">
+                                <h3>Minimalist White Style</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">2.100.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Cao Cổ">
+                            </div>
+                            <div class="product-info">
+                                <h3>Urban Streetwear High</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">2.450.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="badge sale">-15%</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Vans Retro">
+                            </div>
+                            <div class="product-info">
+                                <h3>Retro Canvas Casual</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">1.200.000đ</span>
+                                    <span class="price-old">1.410.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Sneaker">
+                            </div>
+                            <div class="product-info">
+                                <h3>Nike Air Max Big Size</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">1.850.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Sneaker Trắng">
+                            </div>
+                            <div class="product-info">
+                                <h3>Minimalist White Style</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">2.100.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="badge badge-bigsize">BIG SIZE 45-49</span>
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=600&auto=format&fit=crop"
+                                    alt="Giày Cao Cổ">
+                            </div>
+                            <div class="product-info">
+                                <h3>Urban Streetwear High</h3>
+                                <div class="price-wrapper">
+                                    <span class="price">2.450.000đ</span>
+                                </div>
+                                <a href="detail.html" class="add-to-cart">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="load-more-wrapper">
+                        <button id="loadMoreBtn">Xem thêm</button>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>BIGBOYS.</h3>
+                <p class="footer-desc">Đồng hành cùng bạn trên mọi nẻo đường. Chuyên cung cấp các dòng Sneaker độc lạ và
+                    giải pháp Giày Big Size (44-49) chuẩn gu, uy tín hàng đầu.</p>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/share/1d6JTfoHwb/" class="fab fa-facebook-f"></a>
+                    <a href="https://www.instagram.com/bigboys.sneakerbigsize/" class="fab fa-instagram"></a>
+                    <a href="https://www.tiktok.com/@bigboyssneakerbigsizevn" class="fab fa-tiktok"></a>
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <h3>Liên Kết</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="bigsize.html">Giày Big Size (44-49)</a></li>
+                    <li><a href="product.html">Sản Phẩm Khác</a></li>
+                    <li><a href="about.html">Về Chúng Tôi</a></li>
+                    <li><a href="about.html">Chính Sách Bảo Hành</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Thông Tin</h3>
+                <ul class="footer-info">
+                    <li><i class="fas fa-phone"></i> 0704411832</li>
+                    <li><i class="fas fa-envelope"></i> contact@bigboys.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 32/17 Tống Văn Hên, P.Tân Sơn, TP.HCM</li>
+                    <li><i class="fas fa-clock"></i> Mở cửa: 08:00 - 18:00 (Gọi trước)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 BIGBOYS. All rights reserved. Powered by BigBoys.</p>
+        </div>
+    </footer>
+    <div class="floating-contact">
+        <a href="tel:0704411832" class="btn-contact phone">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://zalo.me/0704411832" target="_blank" class="btn-contact zalo">
+            <i class="fas fa-comment"></i>
+        </a>
+        <a href="https://www.facebook.com/share/1d6JTfoHwb/" target="_blank" class="btn-contact messenger">
+            <i class="fab fa-facebook-messenger"></i>
+        </a>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

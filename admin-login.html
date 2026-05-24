@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | BIGBOYS</title>
+    <link rel="stylesheet" href="assets/css/admin-auth.css">
+</head>
+<body>
+
+    <div class="admin-login-wrapper">
+        <div class="admin-login-box">
+            <div class="admin-logo">
+                <h1>BIGBOYS <span>ADMIN</span></h1>
+            </div>
+            
+            <form action="/Admin/Login" method="POST">
+                <div class="input-group">
+                    <label>Tài khoản</label>
+                    <input type="text" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label>Mật khẩu</label>
+                    <input type="password" name="password" required>
+                </div>
+                <button type="submit" class="btn-admin-login">ĐĂNG NHẬP HỆ THỐNG</button>
+            </form>
+            
+            <p class="admin-footer-text">Hệ thống quản trị nội bộ - BigBoys Sneaker</p>
+        </div>
+    </div>
+
+</body>
+</html>

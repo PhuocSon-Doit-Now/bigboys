@@ -1,0 +1,119 @@
+/* --- BIẾN MÀU SẮC --- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --border-color: #000000;
+}
+
+/* --- SECTION ĐĂNG NHẬP --- */
+.login-section {
+    padding: 80px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    min-height: 80vh;
+}
+
+.login-container {
+    background: var(--bg-color);
+    padding: 50px;
+    border: 2px solid var(--border-color); /* Viền đậm thương hiệu */
+    width: 100%;
+    max-width: 450px; /* Tăng nhẹ để form trông cân đối hơn */
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+/* Nút Đăng nhập Google (Mới) */
+.btn-google {
+    width: 100%;
+    padding: 16px;
+    background: #fff;
+    border: 2px solid var(--border-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.btn-google:hover { background: #000; color: #fff; }
+
+.divider {
+    text-align: center;
+    margin: 10px 0 25px;
+    color: #888;
+    font-size: 1.3rem;
+    position: relative;
+}
+
+/* Form Groups */
+.form-group { margin-bottom: 25px; }
+
+.form-group input {
+    width: 100%;
+    padding: 18px;
+    border: 1px solid #000;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.form-group input:focus {
+    outline: none;
+    background: #f9f9f9;
+    border-width: 2px;
+}
+
+/* Nút Đăng Nhập Chính */
+.btn-login {
+    width: 100%;
+    padding: 18px;
+    background: var(--text-color);
+    color: #fff;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-login:hover { background: #333; }
+
+/* Footer Links */
+.login-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.4rem;
+}
+
+.login-footer a {
+    color: var(--text-color);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+/* --- TỐI ƯU MOBILE --- */
+@media (max-width: 768px) {
+    .login-section { padding: 40px 15px; }
+    .login-container { padding: 30px 20px; }
+    .login-container h2 { font-size: 2.2rem; }
+    
+    .form-group input {
+        font-size: 16px; /* Chống zoom trên iOS */
+        padding: 15px;
+    }
+}

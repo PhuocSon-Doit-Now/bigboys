@@ -1,0 +1,64 @@
+/* register.css */
+.register-section {
+    padding: 80px 5%;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    min-height: 80vh;
+}
+
+.register-container {
+    background: #ffffff;
+    padding: 50px;
+    border: 2px solid #000000;
+    width: 100%;
+    max-width: 450px;
+}
+
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.register-group { margin-bottom: 15px; }
+
+.register-group input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #000;
+    font-size: 1.4rem;
+}
+
+.btn-register {
+    width: 100%;
+    padding: 18px;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 800;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.btn-register:hover { background: #333; }
+
+.register-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 1.4rem;
+}
+
+.register-footer a {
+    color: #000;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .register-container { padding: 30px 20px; }
+}

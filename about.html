@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIGBOYS - Cửa Hàng Giày Thời Trang</title>
+    <!-- Nhúng Font chữ hiện đại Inter (tương tự phong cách Minhshop) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Thư viện icon FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/detail.css">
+</head>
+
+<body>
+
+    <!-- TOPBAR THÔNG BÁO (Tạo điểm nhấn đầu trang) -->
+    <div class="topbar">
+        <p>BẠN CẦN GIÀY BIG SIZE? / BẠN LIÊN HỆ BIGBOYS </p>
+    </div>
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <!-- Đổi thành Logo Hình Ảnh -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.jpg" alt="Bigboys Logo">
+            </a>
+        </div>
+
+        <!-- Bổ sung thanh tìm kiếm chính giữa giống phong cách Minhshop -->
+        <div class="search-box">
+            <input type="text" placeholder="Tìm sản phẩm, thương hiệu mong muốn...">
+            <button class="fas fa-search"></button>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">Trang Chủ</a>
+            <a href="bigsize.html" class="nav-link nav-bigsize"><i class="fas fa-star"></i> GIÀY BIG SIZE (44-49)</a>
+            <a href="product.html" class="nav-link">Sản Phẩm Khác</a>
+            <a href="about.html" class="nav-link">Về Chúng Tôi</a>
+            <a href="#contact" class="nav-link">Liên Hệ</a>
+        </nav>
+
+        <div class="icons">
+            <a href="cart.html" class="fas fa-shopping-cart cart-icon"><span class="cart-count">0</span></a>
+            <a href="login.html" class="fas fa-user hide-mobile"></a>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    </header>
+    <div class="breadcrumb-container">
+        <ul class="breadcrumb">
+            <li><a href="index.html" class="breadcrumb-brand">BIGBOYS</a></li>
+            <li class="active">Câu chuyện BIGBOYS</li>
+        </ul>
+    </div>
+    <section class="about-us">
+        <div class="about-hero">
+            <h1>Về Chúng Tôi</h1>
+            <p>Kiến tạo phong cách, không giới hạn kích thước.</p>
+        </div>
+        <section class="social-showcase">
+            <a href="https://www.facebook.com/share/1d6JTfoHwb/" target="_blank" class="social-item">
+                <img src="assets/images/facebook.jpg" alt="Facebook BigBoys">
+                <span>Theo dõi Facebook</span>
+            </a>
+            <a href="https://www.tiktok.com/@bigboyssneakerbigsizevn" target="_blank" class="social-item">
+                <img src="assets/images/tiktok.jpg" alt="TikTok BigBoys">
+                <span>Xem video trên TikTok</span>
+            </a>
+            <a href="https://shopee.vn/bigboysmen_bigsizemen" target="_blank" class="social-item">
+                <img src="assets/images/shopee.jpg" alt="Shopee BigBoys">
+                <span>Ghé thăm Shopee</span>
+            </a>
+        </section>
+        <div class="about-container">
+            <div class="about-map">
+                <h2>Vị trí của BIGBOYS</h2>
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8650771277917!2d106.63222139999999!3d10.821635799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752975eb093ecf%3A0x1b2de239d085521d!2sSNAKE%20SNEAKER!5e0!3m2!1svi!2s!4v1779549426705!5m2!1svi!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    
+                </div>
+            </div>
+            <div class="about-story">
+                <h2>Câu chuyện của BIGBOYS</h2>
+                <p>Chúng tôi bắt đầu với một niềm tin đơn giản: <strong>Ai cũng xứng đáng được mặc đẹp</strong>. Nhận
+                    thấy sự thiếu hụt các sản phẩm thời trang chất lượng cho cộng đồng Big Size, chúng tôi đã ra đời để
+                    xóa bỏ khoảng cách đó.</p>
+            </div>
+            <div class="about-features">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Chất lượng vượt trội</h3>
+                    <p>Mỗi sản phẩm đều được tuyển chọn khắt khe về chất liệu, bền bỉ và thoải mái khi vận động.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Vì cộng đồng</h3>
+                    <p>Chúng tôi tự hào cung cấp đa dạng size từ 45-49, giúp bạn luôn tự tin thể hiện cá tính.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Giao hàng nhanh</h3>
+                    <p>Cam kết đóng gói cẩn thận và giao hàng tận tay khách hàng trong thời gian sớm nhất.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>BIGBOYS.</h3>
+                <p class="footer-desc">Đồng hành cùng bạn trên mọi nẻo đường. Chuyên cung cấp các dòng Sneaker độc lạ và
+                    giải pháp Giày Big Size (44-49) chuẩn gu, uy tín hàng đầu.</p>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/share/1d6JTfoHwb/" class="fab fa-facebook-f"></a>
+                    <a href="https://www.instagram.com/bigboys.sneakerbigsize/" class="fab fa-instagram"></a>
+                    <a href="https://www.tiktok.com/@bigboyssneakerbigsizevn" class="fab fa-tiktok"></a>
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <h3>Liên Kết</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="bigsize.html">Giày Big Size (44-49)</a></li>
+                    <li><a href="product.html">Sản Phẩm Khác</a></li>
+                    <li><a href="about.html">Về Chúng Tôi</a></li>
+                    <li><a href="about.html">Chính Sách Bảo Hành</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Thông Tin</h3>
+                <ul class="footer-info">
+                    <li><i class="fas fa-phone"></i> 0704411832</li>
+                    <li><i class="fas fa-envelope"></i> contact@bigboys.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 32/17 Tống Văn Hên, P.Tân Sơn, TP.HCM</li>
+                    <li><i class="fas fa-clock"></i> Mở cửa: 08:00 - 18:00 (Gọi trước)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 BIGBOYS. All rights reserved. Powered by BigBoys.</p>
+        </div>
+    </footer>
+
+    <div class="floating-contact">
+        <a href="tel:0704411832" class="btn-contact phone">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://zalo.me/0704411832" target="_blank" class="btn-contact zalo">
+            <i class="fas fa-comment"></i>
+        </a>
+        <a href="https://www.facebook.com/share/1d6JTfoHwb/" target="_blank" class="btn-contact messenger">
+            <i class="fab fa-facebook-messenger"></i>
+        </a>
+    </div>
+</body>
+
+</html>

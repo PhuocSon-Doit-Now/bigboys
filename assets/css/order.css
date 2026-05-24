@@ -1,0 +1,83 @@
+/* --- CẤU TRÚC CHUNG --- */
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- ĐỊNH DẠNG TỪNG ĐƠN HÀNG (CARD) --- */
+.order-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.order-card:hover {
+    border-color: #000;
+}
+
+.order-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 12px; 
+    margin-bottom: 12px;
+}
+
+.order-id { 
+    font-weight: 800; 
+    font-size: 1.6rem; 
+    color: #000;
+}
+
+/* --- TRẠNG THÁI --- */
+.order-status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.status.success { background: #d4edda; color: #155724; }
+.status.pending { background: #fff3cd; color: #856404; }
+
+/* --- NỘI DUNG ĐƠN HÀNG --- */
+.order-body p { 
+    margin: 6px 0; 
+    font-size: 1.4rem; 
+    color: #444; 
+}
+
+.order-body strong { color: #000; }
+
+/* --- FOOTER CARD (NÚT XEM) --- */
+.order-footer {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #f4f4f4;
+}
+
+.view-link { 
+    display: inline-block; 
+    color: #000; 
+    text-decoration: underline; 
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.view-link:hover { color: #555; }
+
+/* --- TỐI ƯU MOBILE --- */
+@media (max-width: 768px) {
+    .order-card {
+        padding: 15px;
+    }
+    
+    .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

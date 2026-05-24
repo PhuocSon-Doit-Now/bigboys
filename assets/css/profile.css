@@ -1,0 +1,43 @@
+.profile-wrapper {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Chia 2 cột: Sidebar 250px, Nội dung còn lại */
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Sidebar */
+.profile-sidebar nav { display: flex; flex-direction: column; gap: 15px; }
+.profile-sidebar nav a {
+    font-size: 1.5rem;
+    color: #333;
+    padding: 10px 0;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+}
+.profile-sidebar nav a.active { font-weight: 700; color: #000; }
+.profile-sidebar nav a.logout { color: #ff3b30; margin-top: 20px; }
+
+/* Main Content */
+.info-group { margin-bottom: 20px; }
+.info-group label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 1.3rem; }
+.info-group input, .info-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-size: 1.4rem;
+}
+
+.btn-save {
+    padding: 12px 25px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-wrapper { grid-template-columns: 1fr; }
+    .profile-sidebar { border-bottom: 2px solid #000; padding-bottom: 20px; }
+}
