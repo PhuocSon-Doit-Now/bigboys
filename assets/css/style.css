@@ -200,7 +200,8 @@ section {
     align-items: center;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; /* Thêm dòng này */
+    background-repeat: no-repeat;
+    /* Thêm dòng này */
     margin-top: 5rem;
     padding-left: 10%;
     width: 100%;
@@ -246,6 +247,7 @@ section {
 .banner-1 {
     background-image: url('../images/bannermain.jpg') !important;
 }
+
 .banner-2 {
     background-image: url('../images/bannermain2.jpg') !important;
 }
@@ -255,9 +257,11 @@ section {
     .banner-1 {
         background-image: url('../images/bannermain3.png') !important;
     }
+
     .banner-2 {
         background-image: url('../images/bannermain4.png') !important;
     }
+
     .hero {
         padding-left: 5%;
     }
@@ -356,6 +360,51 @@ section {
         transform: translateX(-50%);
         /* Chạy hết một nửa danh mục tự động reset lặp lại */
     }
+}
+
+/* --- CATEGORY SCROLL --- */
+.category-scroll {
+    width: 100%;
+    margin-bottom: 3rem;
+    overflow-x: auto;
+    /* Kích hoạt thanh cuộn */
+    -webkit-overflow-scrolling: touch;
+    /* Mượt trên iOS */
+    scrollbar-width: none;
+    /* Ẩn scrollbar trên Firefox */
+}
+
+/* Ẩn scrollbar trên Chrome/Safari */
+.category-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    /* Căn giữa trên PC */
+    gap: 1.5rem;
+    padding: 0.5rem;
+    white-space: nowrap;
+    /* Không cho xuống dòng */
+}
+
+.cat-item {
+    padding: 0.8rem 2rem;
+    border: 1px solid #000;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    border-radius: 50px;
+    /* Bo tròn kiểu viên thuốc */
+    transition: all 0.3s ease;
+}
+
+.cat-item:hover,
+.cat-item.active {
+    background: #000;
+    color: #fff;
 }
 
 /* --- PRODUCTS SECTION SẠCH SẼ MƯỢT MÀ --- */
@@ -1113,6 +1162,11 @@ section {
         /* Giảm khoảng cách giữa các nút */
     }
 
+    .category-list {
+        justify-content: flex-start;
+        padding-left: 4%;
+    }
+
     .btn-contact {
         width: 40px;
         /* Thu nhỏ kích thước nút */
@@ -1228,9 +1282,20 @@ section {
         font-size: 50%;
     }
 
-    /* Ẩn thanh tìm kiếm dài trên mobile dọc để không bị đè icon */
     .search-box {
-        display: none !important;
+        display: flex !important;
+        /* Hiển thị lại */
+        flex: 1 !important;
+        /* Chiếm không gian còn lại */
+        height: 35px;
+        /* Giảm chiều cao cho gọn */
+        margin: 0 1rem !important;
+        padding: 0 1rem !important;
+    }
+
+    .search-box input {
+        font-size: 1.2rem !important;
+        /* Chữ nhỏ lại cho vừa */
     }
 
     .hero {
