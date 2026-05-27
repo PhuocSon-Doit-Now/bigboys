@@ -158,7 +158,8 @@ section {
     background: transparent;
     border: none;
     cursor: pointer;
-    font-size: 1.6rem; /* Icon to hơn một chút */
+    font-size: 1.6rem;
+    /* Icon to hơn một chút */
     color: #000000;
     padding-left: 1rem;
 }
@@ -552,96 +553,88 @@ section {
 /* ==========================================================================
    CSS CHO PHẦN SNEAKER LOOKBOOK TẠP CHÍ (NỀN ĐEN SANG TRỌNG)
    ========================================================================== */
-.sneaker-editorial {
-    background: #000000;
+.category-showcase {
     padding: 8rem 5%;
-    border-top: 1px solid #111111;
-}
-
-.editorial-title {
-    text-align: center;
-    margin-bottom: 5rem;
+    background: #ffffff;
 }
 
 .editorial-title h2 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 2px;
+    font-size: 3.5rem;
+    font-weight: 800;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: #000;
 }
 
-.editorial-container {
+.category-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 cột bằng nhau trên PC */
-    gap: 3rem;
-    max-width: 1300px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
 }
 
-.editorial-card {
+.category-card {
     position: relative;
-    background: #000000;
-    cursor: pointer;
-}
-
-/* Tạo khung viền trắng mỏng nghệ thuật ôm quanh ảnh */
-.card-image-wrapper {
-    position: relative;
-    width: 100%;
-    height: 550px;
-    /* Độ cao lý tưởng cho phom ảnh dọc trên PC */
+    height: 500px; /* Tăng chiều cao để ảnh nhìn thanh thoát hơn */
+    display: block;
     overflow: hidden;
-    padding: 1.5rem;
-    /* Khoảng cách tạo đường viền */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    /* Khung viền mờ */
-    transition: all 0.4s ease;
+    background: #f4f4f4;
 }
 
-.editorial-card:hover .card-image-wrapper {
-    border-color: #ffffff;
-    /* Sáng bừng viền lên khi di chuột vào */
+/* Hiệu ứng mờ nền cho ảnh để chữ nổi bật hơn */
+.category-card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%);
+    transition: 0.4s;
 }
 
-.card-image-wrapper img {
+.category-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Cắt cúp ảnh khít gọn vào khung */
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Hiệu ứng zoom nhẹ ảnh bên trong lòng khung khi hover */
-.editorial-card:hover img {
-    transform: scale(1.05);
+.category-card:hover img {
+    transform: scale(1.08);
 }
 
-/* Nút bấm Khám phá thêm phía dưới */
-.editorial-action {
-    text-align: center;
-    margin-top: 5rem;
+.category-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem;
+    z-index: 2; /* Đảm bảo chữ luôn nằm trên lớp phủ */
 }
 
-.btn-outline {
-    display: inline-block;
-    padding: 1.2rem 3.5rem;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: 500;
+.category-overlay h3 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    background: transparent;
-    transition: all 0.3s ease;
 }
 
-.btn-outline:hover {
-    background: #ffffff;
-    color: #000000;
+.category-overlay span {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #fff;
+    transition: 0.3s;
 }
 
+.category-card:hover .category-overlay span {
+    letter-spacing: 5px; /* Hiệu ứng chữ giãn ra khi hover rất sang */
+    border-color: #ff3b30; /* Đổi màu gạch chân sang đỏ nhận diện thương hiệu */
+}
 /* ==========================================================================
    TÍCH HỢP RESPONSIVE CHO KHỐI EDITORIAL (CHO VÀO ĐOẠN @MEDIA CŨ)
    ========================================================================== */
@@ -811,6 +804,80 @@ section {
     .feature-item h3 {
         font-size: 1.4rem;
         /* Chữ tiêu đề gọn lại */
+    }
+
+    .brand-features {
+        background: #fdfdfd;
+        /* Màu nền xám cực nhẹ để tách biệt với phần sản phẩm */
+        border-top: 1px solid #f0f0f0;
+        border-bottom: 1px solid #f0f0f0;
+        padding: 3rem 4% !important;
+    }
+
+    .features-container {
+        display: grid;
+        /* Chia làm 4 cột đều nhau trên giao diện máy tính */
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        /* Ép thành 2 cột ngang */
+        gap: 1.5rem !important;
+        /* Thu nhỏ khoảng cách giữa các ô */
+    }
+
+    .feature-item {
+        text-align: center;
+        padding: 1rem 0.5rem !important;
+        border: 1px solid #f0f0f0;
+        transition: transform 0.3s ease;
+        border-radius: 8px;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-5px);
+        /* Hiệu ứng nhấc lên nhẹ khi di chuột */
+    }
+
+    /* Định dạng Icon */
+    .feature-icon {
+        color: #000000;
+        /* Icon đen tối giản */
+        display: inline-block;
+        background: #f5f5f5;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        width: 4.5rem !important;
+        /* Thu nhỏ icon */
+        height: 4.5rem !important;
+        line-height: 4.5rem !important;
+        font-size: 2rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+
+    .feature-item:hover .feature-icon {
+        background: #000000;
+        color: #ffffff;
+        /* Đổi màu icon khi hover */
+    }
+
+    /* Tiêu đề tính năng */
+    .feature-item h3 {
+        font-weight: 600;
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 1.2rem !important;
+        /* Chữ nhỏ lại để không bị vỡ dòng */
+        margin-bottom: 0.5rem !important
+    }
+
+    /* Nội dung mô tả ngắn */
+    .feature-item p {
+        font-size: 1.3rem;
+        color: #666666;
+        line-height: 1.6;
+        display: none;
     }
 }
 
@@ -1174,15 +1241,19 @@ section {
         gap: 10px;
         /* Giảm khoảng cách giữa các nút */
     }
+
     .search-box {
-        height: 3.8rem; /* Giữ chiều cao vừa vặn cho ngón tay chạm */
+        height: 3.8rem;
+        /* Giữ chiều cao vừa vặn cho ngón tay chạm */
         margin: 0 1rem !important;
         padding: 0 1.2rem !important;
     }
 
-   .search-box input {
-        font-size: 1.4rem !important; /* Chữ trên mobile không nên quá nhỏ (<1.4rem dễ gây lỗi zoom của iOS) */
+    .search-box input {
+        font-size: 1.4rem !important;
+        /* Chữ trên mobile không nên quá nhỏ (<1.4rem dễ gây lỗi zoom của iOS) */
     }
+
     .category-list {
         justify-content: flex-start;
         padding-left: 4%;
@@ -1304,13 +1375,15 @@ section {
     }
 
     .search-box {
-        height: 3.8rem; /* Giữ chiều cao vừa vặn cho ngón tay chạm */
+        height: 3.8rem;
+        /* Giữ chiều cao vừa vặn cho ngón tay chạm */
         margin: 0 1rem !important;
         padding: 0 1.2rem !important;
     }
 
-   .search-box input {
-        font-size: 1.4rem !important; /* Chữ trên mobile không nên quá nhỏ (<1.4rem dễ gây lỗi zoom của iOS) */
+    .search-box input {
+        font-size: 1.4rem !important;
+        /* Chữ trên mobile không nên quá nhỏ (<1.4rem dễ gây lỗi zoom của iOS) */
     }
 
     .hero {

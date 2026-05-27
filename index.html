@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIGBOYS - Cửa Hàng Giày Thời Trang</title>
+    <title>SNAKE - Cửa Hàng Giày Thời Trang</title>
     <!-- Nhúng Font chữ hiện đại Inter (tương tự phong cách Minhshop) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,19 @@
     <!-- Thư viện icon FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/detail.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <link rel="stylesheet" href="assets/css/checkout-succes.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/order-detail.css">
+    <link rel="stylesheet" href="assets/css/order.css">
+    <link rel="stylesheet" href="assets/css/password.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+    <link rel="stylesheet" href="assets/css/register.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
@@ -19,7 +32,7 @@
 
     <!-- TOPBAR THÔNG BÁO (Tạo điểm nhấn đầu trang) -->
     <div class="topbar">
-        <p>BẠN CẦN GIÀY BIG SIZE? / BẠN LIÊN HỆ BIGBOYS </p>
+        <p>BẠN CẦN GIÀY BIG SIZE? / BẠN LIÊN HỆ SNAKE </p>
     </div>
 
     <!-- HEADER & NAVIGATION -->
@@ -115,18 +128,20 @@
 
     <!-- Brand -->
     <div class="bigsize-banner-text">
-        <h2>BIGBOYS</h2>
+        <h2>SNAKE</h2>
     </div>
     <!-- PRODUCTS SECTION -->
     <section class="products" id="products">
         <h2 class="heading">Sản Phẩm <span>Nổi Bật</span></h2>
         <div class="category-scroll">
             <div class="category-list">
-                <a href="product.html" class="cat-item active">Tất cả</a>
+                <a href="product.html" class="cat-item active">Sale off</a>
                 <a href="bigsize.html" class="cat-item">Giày Big Size</a>
                 <a href="product.html" class="cat-item">Sneaker</a>
+                <a href="product.html" class="cat-item">Sport</a>
+                <a href="product.html" class="cat-item">Giày tây</a>
                 <a href="product.html" class="cat-item">Dép</a>
-                <a href="product.html" class="cat-item">Sale off</a>
+                <a href="product.html" class="cat-item">Tất cả</a>
             </div>
         </div>
         <div class="product-container">
@@ -253,33 +268,49 @@
             </div>
         </div>
     </section>
-    <section class="sneaker-editorial">
+    <section class="category-showcase">
         <div class="editorial-title">
-            <h2>SNEAKER ARTISANAL COLLECTION</h2>
+            <h2>DANH MỤC NỔI BẬT</h2>
         </div>
 
-        <div class="editorial-container">
-            <div class="editorial-card">
-                <div class="card-image-wrapper">
-                    <img id="editorial-img-1" src="" alt="Sneaker Look 1">
+        <div class="category-grid">
+            <a href="product.html?category=nike" class="category-card">
+                <img src="assets/images/bigsize.jpg" alt="Nike">
+                <div class="category-overlay">
+                    <h3>Giày BIGSIZE</h3>
+                    <span>Khám phá ngay</span>
                 </div>
-            </div>
-
-            <div class="editorial-card">
-                <div class="card-image-wrapper">
-                    <img id="editorial-img-2" src="" alt="Sneaker Look 2">
+            </a>
+            <a href="product.html?category=nike" class="category-card">
+                <img src="assets/images/sneaker.jpg" alt="Nike">
+                <div class="category-overlay">
+                    <h3>Giày Sneaker</h3>
+                    <span>Khám phá ngay</span>
                 </div>
-            </div>
-
-            <div class="editorial-card">
-                <div class="card-image-wrapper">
-                    <img id="editorial-img-3" src="" alt="Sneaker Look 3">
+            </a>
+            <a href="product.html?category=nike" class="category-card">
+                <img src="assets/images/snaker-sport.jpg" alt="Nike">
+                <div class="category-overlay">
+                    <h3>Giày thể thao</h3>
+                    <span>Khám phá ngay</span>
                 </div>
-            </div>
-        </div>
+            </a>
 
-        <div class="editorial-action">
-            <a href="#products" class="btn-outline">Khám Phá Thêm</a>
+            <a href="product.html?category=adidas" class="category-card">
+                <img src="assets/images/giay-tay.jpg" alt="Adidas">
+                <div class="category-overlay">
+                    <h3>Giày tây</h3>
+                    <span>Khám phá ngay</span>
+                </div>
+            </a>
+
+            <a href="product.html?category=newbalance" class="category-card">
+                <img src="assets/images/dép.jpg" alt="New Balance">
+                <div class="category-overlay">
+                    <h3>dép</h3>
+                    <span>Khám phá ngay</span>
+                </div>
+            </a>
         </div>
     </section>
     <section class="brand-features">
@@ -289,7 +320,6 @@
                     <i class="fas fa-shipping-fast"></i>
                 </div>
                 <h3>Giao Hàng Toàn Quốc</h3>
-                <p>Nhận hàng và kiểm tra sản phẩm kỹ càng trước khi thanh toán (Ship COD toàn quốc).</p>
             </div>
 
             <div class="feature-item">
@@ -297,7 +327,6 @@
                     <i class="fas fa-exchange-alt"></i>
                 </div>
                 <h3>Đổi Trả Dễ Dàng</h3>
-                <p>Hỗ trợ đổi size linh hoạt trong vòng 7 ngày nếu mang không vừa hoặc không ưng ý.</p>
             </div>
 
             <div class="feature-item">
@@ -305,8 +334,6 @@
                     <i class="fas fa-tags"></i>
                 </div>
                 <h3>Tối Ưu Chi Phí</h3>
-                <p>Sở hữu ngay những phối màu Sneaker cực hiếm và độc lạ với mức giá chỉ bằng 1/5 đến 1/10 hàng
-                    Authentic.</p>
             </div>
 
             <div class="feature-item">
@@ -314,7 +341,6 @@
                     <i class="fas fa-headset"></i>
                 </div>
                 <h3>Hỗ Trợ 24/7</h3>
-                <p>Đội ngũ tư vấn viên am hiểu về size giày, luôn sẵn sàng phục vụ bạn mọi lúc.</p>
             </div>
         </div>
     </section>
@@ -322,7 +348,7 @@
     <footer class="footer" id="contact">
         <div class="footer-container">
             <div class="footer-box">
-                <h3>BIGBOYS.</h3>
+                <h3>SNAKE.</h3>
                 <p class="footer-desc">Đồng hành cùng bạn trên mọi nẻo đường. Chuyên cung cấp các dòng Sneaker độc lạ và
                     giải pháp Giày Big Size (44-49) chuẩn gu, uy tín hàng đầu.</p>
                 <div class="footer-socials">
@@ -347,7 +373,7 @@
                 <h3>Thông Tin</h3>
                 <ul class="footer-info">
                     <li><i class="fas fa-phone"></i> 0704411832</li>
-                    <li><i class="fas fa-envelope"></i> contact@bigboys.com</li>
+                    <li><i class="fas fa-envelope"></i> contact@SNAKE.com</li>
                     <li><i class="fas fa-map-marker-alt"></i> 32/17 Tống Văn Hên, P.Tân Sơn, TP.HCM</li>
                     <li><i class="fas fa-clock"></i> Mở cửa: 08:00 - 18:00 (Gọi trước)</li>
                 </ul>
@@ -355,7 +381,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 BIGBOYS. All rights reserved. Powered by BigBoys.</p>
+            <p>&copy; 2026 SNAKE. All rights reserved. Powered by SNAKE.</p>
         </div>
     </footer>
     <div class="floating-contact">
