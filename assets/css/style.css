@@ -554,13 +554,14 @@ section {
    CSS CHO PHẦN SNEAKER LOOKBOOK TẠP CHÍ (NỀN ĐEN SANG TRỌNG)
    ========================================================================== */
 .category-showcase {
-    padding: 8rem 5%;
+    padding: 2rem 5% 5rem 5% !important; 
     background: #ffffff;
 }
 
 /* Tối ưu chung cho mọi tiêu đề section */
 .editorial-title {
-    margin-bottom: 3rem !important; /* Thu nhỏ khoảng cách dưới để không bị xa quá */
+    margin-top: 0 !important;
+    margin-bottom: 3rem !important; /* Giữ khoảng cách vừa phải với lưới ảnh bên dưới */
     text-align: center;
 }
 
