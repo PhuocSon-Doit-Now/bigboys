@@ -357,7 +357,7 @@ section {
 .brand-item img {
     width: 100%;
     height: auto;
-    max-height: 35px;
+    max-height: 60px;
     object-fit: contain;
     filter: brightness(0) invert(1);
     /* Chuyển mọi ảnh thành màu trắng */
@@ -554,19 +554,21 @@ section {
    CSS CHO PHẦN SNEAKER LOOKBOOK TẠP CHÍ (NỀN ĐEN SANG TRỌNG)
    ========================================================================== */
 .category-showcase {
-    padding: 2rem 5% 5rem 5% !important; 
+    padding: 2rem 5% 5rem 5% !important;
     background: #ffffff;
 }
 
 /* Tối ưu chung cho mọi tiêu đề section */
 .editorial-title {
     margin-top: 0 !important;
-    margin-bottom: 3rem !important; /* Giữ khoảng cách vừa phải với lưới ảnh bên dưới */
+    margin-bottom: 3rem !important;
+    /* Giữ khoảng cách vừa phải với lưới ảnh bên dưới */
     text-align: center;
 }
 
 .editorial-title h2 {
-    font-size: 2.8rem !important; /* Tăng size cho nổi bật hơn */
+    font-size: 2.8rem !important;
+    /* Tăng size cho nổi bật hơn */
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -574,6 +576,7 @@ section {
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
+
 }
 
 /* Thêm thanh gạch chân tinh tế để giống style trang "Sản phẩm nổi bật" */
@@ -596,7 +599,8 @@ section {
 
 .category-card {
     position: relative;
-    height: 500px; /* Tăng chiều cao để ảnh nhìn thanh thoát hơn */
+    height: 500px;
+    /* Tăng chiều cao để ảnh nhìn thanh thoát hơn */
     display: block;
     overflow: hidden;
     background: #f4f4f4;
@@ -606,8 +610,11 @@ section {
 .category-card::after {
     content: "";
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%);
     transition: 0.4s;
 }
 
@@ -628,7 +635,8 @@ section {
     left: 0;
     width: 100%;
     padding: 4rem;
-    z-index: 2; /* Đảm bảo chữ luôn nằm trên lớp phủ */
+    z-index: 2;
+    /* Đảm bảo chữ luôn nằm trên lớp phủ */
 }
 
 .category-overlay h3 {
@@ -652,9 +660,12 @@ section {
 }
 
 .category-card:hover .category-overlay span {
-    letter-spacing: 5px; /* Hiệu ứng chữ giãn ra khi hover rất sang */
-    border-color: #ff3b30; /* Đổi màu gạch chân sang đỏ nhận diện thương hiệu */
+    letter-spacing: 5px;
+    /* Hiệu ứng chữ giãn ra khi hover rất sang */
+    border-color: #ff3b30;
+    /* Đổi màu gạch chân sang đỏ nhận diện thương hiệu */
 }
+
 /* ==========================================================================
    TÍCH HỢP RESPONSIVE CHO KHỐI EDITORIAL (CHO VÀO ĐOẠN @MEDIA CŨ)
    ========================================================================== */
@@ -1135,22 +1146,29 @@ section {
     z-index: 9999;
 }
 
+/* Thiết lập nút với nền đen và icon trắng */
 .btn-contact {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    background-color: #000000 !important; /* Ép buộc nền đen */
+    border: 2px solid #000000 !important;  /* Ép buộc viền đen */
+    color: #ffffff !important;            /* Ép buộc icon trắng */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 20px !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3) !important;
 }
 
+/* Hiệu ứng Hover: Đảo ngược (Nền trắng, Icon đen) */
 .btn-contact:hover {
-    transform: scale(1.1);
+    background-color: #ffffff !important; /* Khi hover thành nền trắng */
+    color: #000000 !important;            /* Khi hover thành icon đen */
+    border-color: #000000 !important;
+    transform: scale(1.1) !important;
 }
 
 /* Màu sắc từng nút */
@@ -1255,11 +1273,15 @@ section {
     }
 
     .floating-contact {
-        bottom: 10px;
-        /* Đẩy lên cao hơn một chút */
-        right: 10px;
-        gap: 10px;
-        /* Giảm khoảng cách giữa các nút */
+        bottom: 15px; /* Giữ khoảng cách vừa phải từ cạnh dưới */
+        right: 10px;  /* Giữ khoảng cách từ cạnh phải */
+        gap: 8px;     /* Thu hẹp khoảng cách giữa các nút */
+    }
+
+    .btn-contact {
+        width: 35px;  /* Thu nhỏ kích thước nút từ 40px xuống 35px */
+        height: 35px; /* Thu nhỏ chiều cao */
+        font-size: 14px; /* Giảm kích thước icon bên trong */
     }
 
     .search-box {
@@ -1277,14 +1299,6 @@ section {
     .category-list {
         justify-content: flex-start;
         padding-left: 4%;
-    }
-
-    .btn-contact {
-        width: 40px;
-        /* Thu nhỏ kích thước nút */
-        height: 40px;
-        font-size: 16px;
-        /* Giảm size icon */
     }
 
     .topbar {
@@ -1353,7 +1367,7 @@ section {
     }
 
     .brand-item img {
-        max-height: 25px !important;
+        max-height: 55px !important;
     }
 
     .swiper-slide.hero {
@@ -1473,7 +1487,7 @@ section {
     }
 
     .brand-item img {
-        max-height: 22px !important;
+        max-height: 50px !important;
         width: auto !important;
     }
 
