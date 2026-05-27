@@ -558,14 +558,33 @@ section {
     background: #ffffff;
 }
 
+/* Tối ưu chung cho mọi tiêu đề section */
+.editorial-title {
+    margin-bottom: 3rem !important; /* Thu nhỏ khoảng cách dưới để không bị xa quá */
+    text-align: center;
+}
+
 .editorial-title h2 {
-    font-size: 3.5rem;
+    font-size: 2.8rem !important; /* Tăng size cho nổi bật hơn */
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 5rem;
-    text-align: center;
     color: #000;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Thêm thanh gạch chân tinh tế để giống style trang "Sản phẩm nổi bật" */
+.editorial-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: #000;
 }
 
 .category-grid {
